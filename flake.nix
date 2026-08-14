@@ -8,6 +8,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    lanzaboote.url = "github:nix-community/lanzaboote/v1.1.0";
+    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;}{
     imports = [

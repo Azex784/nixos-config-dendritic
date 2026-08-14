@@ -30,13 +30,14 @@
     system.stateVersion = "26.05";
     # Pop in security icons
     security.polkit.enable = true;
-    nixpkgs.config.allowUnfree = true;
 
     nix.settings.experimental-features = "nix-command flakes";
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
     # Set your time zone.
     time.timeZone = "Europe/Warsaw";
+
+    nixpkgs.config.allowUnfree = true;
 
     # Services
     services = {

@@ -6,6 +6,7 @@
       # started in user sessions.
       zsh.enable = true;
       mtr.enable = true;
+      dconf.enable = true;
       bash = {
         enable = true;
       };
@@ -20,16 +21,6 @@
         efibootmgr
         arch-install-scripts
         gparted
-
-        zed-editor
-        alacritty
-        btop
-        htop
-        keepassxc
-        vivaldi
-        spotify
-        anki
-        fastfetch
       ];
     };
   };

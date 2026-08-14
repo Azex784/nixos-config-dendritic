@@ -1,4 +1,3 @@
-
 { self, inputs, ... }: {
 
   flake.modules.homeManager.cursor = { pkgs, lib, ... }: {
