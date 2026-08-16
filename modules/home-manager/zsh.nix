@@ -14,7 +14,6 @@
       syntaxHighlighting.enable = true;
       history.size = 10000;
 
-
       shellAliases  = {
           # General
           ll = "ls -la";

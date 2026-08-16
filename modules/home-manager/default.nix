@@ -11,12 +11,8 @@
       self.modules.homeManager.packages
       self.modules.homeManager.alacritty
       self.modules.homeManager.dark-theme
+      self.modules.homeManager.spicetify
     ];
-
-    home.stateVersion = "26.05";
-    programs.home-manager.enable = true;
-    home.username = "azex";
-    home.homeDirectory = "/home/azex";
 
   };
 }

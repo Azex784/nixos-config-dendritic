@@ -30,6 +30,7 @@
           extraSpecialArgs = { inherit inputs; };
           users.azex = self.modules.homeManager.azex;
         };
+
       }
     ];
   };
