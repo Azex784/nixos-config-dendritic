@@ -15,7 +15,6 @@
         spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
     in
     {
-      #spotifyLaunchFlags = "ozone-platform=wayland";
       enable = true;
       windowManagerPatch = true;
       enabledExtensions = with spicePkgs.extensions; [

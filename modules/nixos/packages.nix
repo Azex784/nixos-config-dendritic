@@ -21,6 +21,7 @@
         efibootmgr
         arch-install-scripts
         gparted
+        noctalia
       ];
     };
   };

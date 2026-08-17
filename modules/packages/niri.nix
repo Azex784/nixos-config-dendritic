@@ -3,9 +3,7 @@
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
       settings = {
-        spawn-at-startup = [
-          (lib.getExe self'.packages.myNoctalia)
-      ];
+        spawn-at-startup = [(lib.getExe pkgs.noctalia)];
         prefer-no-csd = {};
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         input.keyboard.xkb.layout = "pl";
@@ -22,8 +20,11 @@
           "Mod+Z".spawn-sh = lib.getExe pkgs.alacritty;
 
           "Mod+X".screenshot-window = {};
-          # "Mod+X".spawn-sh = lib.getExe pkgs.zed;
-          # "Mod+V".spawn-sh = lib.getExe pkgs.vivaldi;
+
+          # "Mod+V".spawn-sh = "noctalia-shell ipc call launcher toggle";
+          # "Mod+B".spawn-sh = "noctalia-shell ipc call controlCenter toggle";
+          # "Mod+B".spawn-sh = "noctalia-shell ipc call controlCenter toggle";
+
 
           "Mod+C".close-window = {};
 

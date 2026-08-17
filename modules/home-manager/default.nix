@@ -11,6 +11,7 @@
       self.modules.homeManager.packages
       self.modules.homeManager.alacritty
       self.modules.homeManager.dark-theme
+      self.modules.homeManager.noctalia
       self.modules.homeManager.spicetify
     ];
 
