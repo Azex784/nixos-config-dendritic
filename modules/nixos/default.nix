@@ -9,7 +9,7 @@
       self.modules.nixos.niri
       self.modules.nixos.packages
       self.modules.nixos.users
-      self.modules.nixos.ly
+      self.modules.nixos.noctalia-greeter
 
     ];
 
