@@ -13,6 +13,7 @@
           size = 24;
           path = "${pkgs.nordzy-cursor-theme}/share/icons";
         };
+        appearance.hide_logo = true;
       };
     };
   };

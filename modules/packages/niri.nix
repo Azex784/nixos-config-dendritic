@@ -8,6 +8,16 @@
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         input.keyboard.xkb.layout = "pl";
         layout.gaps = 5;
+        hotkey-overlay.skip-at-startup = {};
+        window-rule.open-maximized = true;
+
+        # workspaces = {
+        #   "1-terminal" = {};
+        #   "2-code" = {};
+        #   "3-web" = {};
+        #   "4-music" = {};
+        #   "5-gaming" = {};
+        # };
 
        	outputs = {
       		"DP-3" = {
@@ -17,16 +27,38 @@
        	};
 
         binds = {
-          "Mod+Z".spawn-sh = lib.getExe pkgs.alacritty;
+          "Mod+Z".spawn-sh = "alacritty";
+          "Mod+Shift+Z".spawn-sh = "zeditor";
+          "Mod+Shift+Q".spawn-sh = "vivaldi";
+          "Mod+Shift+E".spawn-sh = "spotify";
 
-          "Mod+X".screenshot-window = {};
+          "Mod+D".spawn-sh = "noctalia msg panel-toggle launcher";
+          "Mod+Space".spawn-sh = "noctalia msg panel-toggle control-center";
+          "Mod+V".spawn-sh = "noctalia msg settings-open";
 
-          # "Mod+V".spawn-sh = "noctalia-shell ipc call launcher toggle";
-          # "Mod+B".spawn-sh = "noctalia-shell ipc call controlCenter toggle";
-          # "Mod+B".spawn-sh = "noctalia-shell ipc call controlCenter toggle";
+          "Mod+X".spawn-sh = "noctalia msg screenshot-region";
+          "Mod+Shift+X".spawn-sh = "noctalia msg screenshot-fullscreen";
 
+          "Mod+U".spawn-sh = "noctalia msg session lock";
+          "Mod+I".spawn-sh = "noctalia msg session logout";
+          "Mod+O".spawn-sh = "noctalia msg session reboot";
+          "Mod+P".spawn-sh = "noctalia msg session shutdown";
+
+          "Mod+J".spawn-sh = "noctalia msg media previous";
+          "Mod+K".spawn-sh = "noctalia msg media toggle";
+          "Mod+L".spawn-sh = "noctalia msg media next";
+
+          "Mod+Shift+J".spawn-sh = "noctalia msg volume-down";
+          "Mod+Shift+K".spawn-sh = "noctalia msg volume-mute";
+          "Mod+Shift+L".spawn-sh = "noctalia msg volume-up";
+
+
+
+          "Mod+F1".show-hotkey-overlay = {};
+          "Mod+Tab".toggle-overview = {};
 
           "Mod+C".close-window = {};
+          "Mod+Shift+C".quit = {};
 
           "Mod+Left".focus-column-left = {};
           "Mod+Right".focus-column-right = {};
@@ -34,7 +66,7 @@
           "Mod+Down".focus-window-down = {};
 
           "Mod+A".maximize-column = {};
-          "Mod+D".fullscreen-window = {};
+          "F11".fullscreen-window = {};
 
           "Mod+Q".set-column-width = "-5%";
           "Mod+E".set-column-width = "+5%";
@@ -43,6 +75,9 @@
 
           "Mod+Shift+W".move-column-to-workspace-up = {};
           "Mod+Shift+S".move-column-to-workspace-down = {};
+
+          "Mod+Shift+D".focus-workspace-down = {};
+          "Mod+Shift+A".focus-workspace-up = {};
 
           "Mod+1".focus-workspace = 1;
           "Mod+2".focus-workspace = 2;
@@ -60,8 +95,16 @@
           "Mod+Shift+Up".move-window-up = {};
           "Mod+Shift+Down".move-window-down = {};
 
+          "Mod+G".toggle-window-floating = {};
+          "Mod+T".switch-focus-between-floating-and-tiling = {};
+
+          "Mod+B".switch-preset-column-width = {};
+
           "Mod+R".consume-window-into-column = {};
           "Mod+F".expel-window-from-column = {};
+
+          "Mod+Shift+R".consume-or-expel-window-left = {};
+          "Mod+Shift+F".consume-or-expel-window-right = {};
         };
       };
     };
