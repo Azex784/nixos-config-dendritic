@@ -10,9 +10,9 @@ sound_volume = 0.5
 volume_change_sound = ""
 
 [backdrop]
-blur_intensity = 0.5
+blur_intensity = 0.0
 enabled = false
-tint_intensity = 0.30000001192092896
+tint_intensity = 0.0
 
 [bar]
 order = [ "default" ]
@@ -28,7 +28,7 @@ order = [ "default" ]
     capsule_padding = 6.0
     capsule_thickness = 0.75999999046325684
     center = [ "group:g3" ]
-    concave_edge_corners = true
+    concave_edge_corners = false
     contact_shadow = false
     enabled = true
     end = [ "group:g2", "group:g9", "group:g8", "keyboard_layout", "group:g1" ]
@@ -39,12 +39,12 @@ order = [ "default" ]
     margin_ends = 0
     margin_opposite_edge = 0
     padding = 10
-    panel_overlap = 1
+    panel_overlap = 0
     position = "top"
     radius = 0
     radius_bottom_left = 0
     radius_bottom_right = 0
-    radius_top_left = 1
+    radius_top_left = 0
     radius_top_right = 0
     reserve_space = true
     scale = 0.94999998807907104
@@ -364,7 +364,7 @@ up = [ "Up" ]
 validate = [ "Return", "KP_Enter", "space" ]
 
 [location]
-address = "Lodz,Polska"
+address = "Lodz, Polska"
 auto_locate = true
 custom_schedule = false
 sunrise = "07:00"
