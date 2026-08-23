@@ -7,11 +7,11 @@
         htop
         keepassxc
         vivaldi
-        spotify
         anki
         fastfetch
         kdePackages.dolphin
         zed-editor
+        lunar-client
       ];
     };
 

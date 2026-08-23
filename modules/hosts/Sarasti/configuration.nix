@@ -6,6 +6,5 @@
       self.modules.nixos.default
       self.modules.nixos.hardware
     ];
-
   };
 }

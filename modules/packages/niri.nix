@@ -6,13 +6,13 @@
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
       ];
-
+        prefer-no-csd = {};
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         input.keyboard.xkb.layout = "pl";
         layout.gaps = 5;
 
        	outputs = {
-      		"DP-2" = {
+      		"DP-3" = {
       			 mode = "1920x1080@165.003";
       			 scale = 1.0;
       		};
@@ -21,6 +21,7 @@
         binds = {
           "Mod+Z".spawn-sh = lib.getExe pkgs.alacritty;
 
+          "Mod+X".screenshot-window = {};
           # "Mod+X".spawn-sh = lib.getExe pkgs.zed;
           # "Mod+V".spawn-sh = lib.getExe pkgs.vivaldi;
 
