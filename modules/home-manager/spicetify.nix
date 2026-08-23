@@ -9,7 +9,7 @@
     programs.spicetify =
     let
         # With flakes:
-        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
     in
     {
       enable = true;
@@ -36,9 +36,7 @@
         dancingHamster
       ];
 
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "macchiato";
-
+      theme = spicePkgs.themes.starryNight;
     };
 
   };

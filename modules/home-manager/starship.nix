@@ -8,9 +8,9 @@
       settings =
       let
         # Blue
-        colorBack = "bold #0087FF";
+        colorBack = "bold #558afc";
         # Green
-        colorMain = "bold #50FF64";
+        colorMain = "bold #7dcfff";
         # Red
         colorError = "bold #FF0000";
       in

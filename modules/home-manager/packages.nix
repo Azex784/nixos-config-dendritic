@@ -1,6 +1,8 @@
 { self, inputs, ... }: {
 
   flake.modules.homeManager.packages = { pkgs, lib, ... }: {
+    services.mpris-proxy.enable = true;
+
     home = {
       packages = with pkgs; [
         btop
