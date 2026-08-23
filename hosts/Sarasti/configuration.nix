@@ -5,6 +5,10 @@
     imports = [
       self.modules.nixos.default
       self.modules.nixos.hardware
+      self.modules.nixos.nvidia-drivers
     ];
+
+    networking.hostName = "Sarasti"; # Define your hostname.
+
   };
 }

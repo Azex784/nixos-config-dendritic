@@ -13,11 +13,15 @@
         fastfetch
         kdePackages.dolphin
         zed-editor
-        lunar-client
-        # Plugins
+	prismlauncher
+        # --> Start of Noctalia Plugins Dependencies <--
         hyprpicker
         fzf
         gh
+        # --> End of Noctalia Plugins Dependencies <--
+        jetbrains.clion
+        steam
+        neovim
       ];
     };
 

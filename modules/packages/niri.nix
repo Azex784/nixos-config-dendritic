@@ -40,12 +40,21 @@
             open-on-workspace = "3-music";
           }
 
+          {
+            matches = [
+              { app-id = "org.prismlauncher.PrismLauncher"; }
+              { app-id = "Steam"; }
+            ];
+            open-on-workspace = "4-gaming";
+          }
+
         ];
 
         workspaces = {
           "1-editor" = {};
           "2-web" = {};
           "3-music" = {};
+          "4-gaming" = {};
         };
 
 
@@ -74,14 +83,13 @@
           "Mod+O".spawn-sh = "noctalia msg session reboot";
           "Mod+P".spawn-sh = "noctalia msg session shutdown";
 
-          "Mod+J".spawn-sh = "noctalia msg media previous";
-          "Mod+K".spawn-sh = "noctalia msg media toggle";
-          "Mod+L".spawn-sh = "noctalia msg media next";
+          "Mod+B".spawn-sh = "noctalia msg media previous";
+          "Mod+N".spawn-sh = "noctalia msg media toggle";
+          "Mod+M".spawn-sh = "noctalia msg media next";
 
-          "Mod+Shift+J".spawn-sh = "noctalia msg volume-down";
-          "Mod+Shift+K".spawn-sh = "noctalia msg volume-mute";
-          "Mod+Shift+L".spawn-sh = "noctalia msg volume-up";
-
+          "Mod+Shift+B".spawn-sh = "noctalia msg volume-down";
+          "Mod+Shift+N".spawn-sh = "noctalia msg volume-mute";
+          "Mod+Shift+M".spawn-sh = "noctalia msg volume-up";
 
           "Mod+F1".show-hotkey-overlay = {};
           "Mod+Tab".toggle-overview = {};
@@ -89,10 +97,10 @@
           "Mod+C".close-window = {};
           "Mod+Shift+C".quit = {};
 
-          "Mod+Left".focus-column-left = {};
-          "Mod+Right".focus-column-right = {};
-          "Mod+Up".focus-window-up = {};
-          "Mod+Down".focus-window-down = {};
+          "Mod+H".focus-column-left = {};
+          "Mod+L".focus-column-right = {};
+          "Mod+K".focus-window-up = {};
+          "Mod+J".focus-window-down = {};
 
           "Mod+A".maximize-column = {};
           "F11".fullscreen-window = {};
@@ -118,16 +126,16 @@
           "Mod+8".focus-workspace = 8;
           "Mod+9".focus-workspace = 9;
 
-          "Mod+Shift+Left".move-column-left = {};
-          "Mod+Shift+Right".move-column-right = {};
+          "Mod+Shift+H".move-column-left = {};
+          "Mod+Shift+L".move-column-right = {};
 
-          "Mod+Shift+Up".move-window-up = {};
-          "Mod+Shift+Down".move-window-down = {};
+          "Mod+Shift+K".move-window-up = {};
+          "Mod+Shift+J".move-window-down = {};
 
           "Mod+G".toggle-window-floating = {};
           "Mod+T".switch-focus-between-floating-and-tiling = {};
 
-          "Mod+B".switch-preset-column-width = {};
+          "Mod+Y".switch-preset-column-width = {};
 
           "Mod+R".consume-window-into-column = {};
           "Mod+F".expel-window-from-column = {};
