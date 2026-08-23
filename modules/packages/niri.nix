@@ -3,7 +3,13 @@
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
       settings = {
-        spawn-at-startup = [(lib.getExe pkgs.noctalia)];
+        spawn-at-startup = [
+          (lib.getExe pkgs.noctalia)
+          "zeditor"
+          "vivaldi"
+          "spotify"
+        ];
+
         prefer-no-csd = {};
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         input.keyboard.xkb.layout = "pl";
@@ -11,13 +17,37 @@
         hotkey-overlay.skip-at-startup = {};
         window-rule.open-maximized = true;
 
-        # workspaces = {
-        #   "1-terminal" = {};
-        #   "2-code" = {};
-        #   "3-web" = {};
-        #   "4-music" = {};
-        #   "5-gaming" = {};
-        # };
+
+        window-rules = [
+          {
+            matches = [
+              { app-id = "dev.zed.Zed"; }
+            ];
+            open-on-workspace = "1-editor";
+          }
+
+          {
+            matches = [
+              { app-id = "vivaldi-stable"; }
+            ];
+            open-on-workspace = "2-web";
+          }
+
+          {
+            matches = [
+              { app-id = "Spotify"; }
+            ];
+            open-on-workspace = "3-music";
+          }
+
+        ];
+
+        workspaces = {
+          "1-editor" = {};
+          "2-web" = {};
+          "3-music" = {};
+        };
+
 
        	outputs = {
       		"DP-3" = {
@@ -51,7 +81,6 @@
           "Mod+Shift+J".spawn-sh = "noctalia msg volume-down";
           "Mod+Shift+K".spawn-sh = "noctalia msg volume-mute";
           "Mod+Shift+L".spawn-sh = "noctalia msg volume-up";
-
 
 
           "Mod+F1".show-hotkey-overlay = {};
