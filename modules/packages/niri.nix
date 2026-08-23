@@ -60,10 +60,6 @@
 
           "Mod+R".consume-window-into-column = {};
           "Mod+F".expel-window-from-column = {};
-
-          "Mod+Space".spawn-sh = "noctalia-shell ipc call launcher toggle";
-
-          "Mod+P".spawn-sh = "noctalia-shell ipc call controlCenter toggle";
         };
       };
     };

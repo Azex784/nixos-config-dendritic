@@ -26,7 +26,6 @@
           rbt="sudo reboot now";
 
           # Package management
-          upd = "sudo nix flake update --flake /home/azex/nixos#Sarasti";
           upg = "sudo nixos-rebuild switch --impure --flake /home/azex/nixos#Sarasti";
           delete-cache = "nix-collect-garbage";
           delete = "nix-collect-garbage -d";
