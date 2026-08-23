@@ -13,6 +13,8 @@
       self.modules.homeManager.dark-theme
       self.modules.homeManager.noctalia
       self.modules.homeManager.spicetify
+      self.modules.homeManager.zed
+      self.modules.homeManager.clion
     ];
   };
 }

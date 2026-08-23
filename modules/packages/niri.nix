@@ -43,7 +43,7 @@
           {
             matches = [
               { app-id = "org.prismlauncher.PrismLauncher"; }
-              { app-id = "Steam"; }
+              { app-id = "steam"; }
             ];
             open-on-workspace = "4-gaming";
           }

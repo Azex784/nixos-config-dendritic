@@ -18,9 +18,10 @@
         fzf
         gh
         # --> End of Noctalia Plugins Dependencies <--
-        jetbrains.clion
+        # jetbrains.clion
         steam
         neovim
+        tor
       ];
     };
   };
