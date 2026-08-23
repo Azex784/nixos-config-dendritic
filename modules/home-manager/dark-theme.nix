@@ -15,6 +15,5 @@
         gtk-theme = "Adwaita-dark";     # to dla starszych apek GTK3
       };
     };
-
   };
 }

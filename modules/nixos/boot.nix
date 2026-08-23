@@ -28,6 +28,5 @@
         efi.canTouchEfiVariables = true;
       };
     };
-
   };
 }

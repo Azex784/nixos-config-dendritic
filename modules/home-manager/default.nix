@@ -14,6 +14,5 @@
       self.modules.homeManager.noctalia
       self.modules.homeManager.spicetify
     ];
-
   };
 }

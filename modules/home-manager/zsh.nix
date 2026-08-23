@@ -29,8 +29,6 @@
           delete-cache = "nix-collect-garbage";
           delete = "nix-collect-garbage -d";
       };
-
     };
-
   };
 }

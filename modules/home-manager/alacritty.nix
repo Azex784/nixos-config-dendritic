@@ -38,7 +38,6 @@
               cyan = "#a4daff";
               white = "#c0caf5";
             };
-
           };
         };
       };

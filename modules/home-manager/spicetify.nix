@@ -38,7 +38,5 @@
 
       theme = spicePkgs.themes.starryNight;
     };
-
   };
-
 }

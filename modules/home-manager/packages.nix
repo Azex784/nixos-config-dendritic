@@ -11,9 +11,8 @@
         vivaldi
         anki
         fastfetch
-        kdePackages.dolphin
         zed-editor
-	prismlauncher
+        prismlauncher
         # --> Start of Noctalia Plugins Dependencies <--
         hyprpicker
         fzf
@@ -24,6 +23,5 @@
         neovim
       ];
     };
-
   };
 }

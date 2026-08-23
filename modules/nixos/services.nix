@@ -21,6 +21,5 @@
         pulse.enable = true;
       };
     };
-
   };
 }
