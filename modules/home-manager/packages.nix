@@ -12,6 +12,10 @@
         kdePackages.dolphin
         zed-editor
         lunar-client
+        # Plugins
+        hyprpicker
+        fzf
+        gh
       ];
     };
 

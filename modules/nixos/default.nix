@@ -10,6 +10,7 @@
       self.modules.nixos.packages
       self.modules.nixos.users
       self.modules.nixos.ly
+
     ];
 
     nix.gc = {
