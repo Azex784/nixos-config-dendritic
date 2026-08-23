@@ -18,11 +18,27 @@
         adblockify
         hidePodcasts
         shuffle
-        loopyLoop
-        trashbin
+        fullAlbumDate
+        betterGenres
+        aiBandBlocker
       ];
-      theme = spicePkgs.themes.tokyoNight;
-      colorScheme = "Storm";
+
+      enabledCustomApps = with spicePkgs.apps; [
+        newReleases
+        ncsVisualizer
+        lyricsPlus
+        nameThatTune
+      ];
+
+      enabledSnippets = with spicePkgs.snippets; [
+        rotatingCoverart
+        pointer
+        dancingHamster
+      ];
+
+      theme = spicePkgs.themes.catppuccin;
+      colorScheme = "macchiato";
+
     };
 
   };

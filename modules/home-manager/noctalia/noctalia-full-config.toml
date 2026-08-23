@@ -51,7 +51,7 @@ order = [ "default" ]
     shadow = false
     show_on_workspace_switch = true
     smart_auto_hide = false
-    start = [ "group:g5", "group:g11", "group:g6", "group:g4", "group:g7", "group:g10" ]
+    start = [ "group:g5", "group:g11", "group:g6", "group:g12", "group:g4", "group:g7", "group:g10" ]
     thickness = 34
     widget_spacing = 6
 
@@ -146,7 +146,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g10"
-        members = [ "eyecare-widget", "bar_3" ]
+        members = [ "eyecare-widget" ]
         opacity = 1.0
         padding = 6.0
 
@@ -167,6 +167,16 @@ order = [ "default" ]
         fill = "surface_variant"
         id = "g11"
         members = [ "active_window", "media", "audio_visualizer" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g12"
+        members = [ "cat" ]
         opacity = 1.0
         padding = 6.0
 
@@ -261,7 +271,7 @@ main_axis_padding = 10
 margin_edge = 10
 margin_ends = 0
 monitors = []
-pinned = []
+pinned = [ "vivaldi-stable", "spotify" ]
 position = "bottom"
 radius = 16
 radius_bottom_left = 16
@@ -362,7 +372,7 @@ sunset = "19:00"
 
 [lockscreen]
 allow_empty_password = false
-blur_intensity = 0.5
+blur_intensity = 0.099999994039535522
 blurred_desktop = false
 enabled = true
 fingerprint = true
@@ -372,9 +382,9 @@ tint_intensity = 0.30000001192092896
 wallpaper = ""
 
 [lockscreen_widgets]
-enabled = false
+enabled = true
 schema_version = 2
-widget_order = [ "lockscreen-login-box@DP-3" ]
+widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-0000000000000001" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
@@ -385,7 +395,7 @@ widget_order = [ "lockscreen-login-box@DP-3" ]
     box_height = 196.0
     box_width = 810.0
     cx = 960.0
-    cy = 898.0
+    cy = 526.0
     enabled = true
     output = "DP-3"
     rotation = 0.0
@@ -393,10 +403,10 @@ widget_order = [ "lockscreen-login-box@DP-3" ]
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
         background_color = "surface_variant"
-        background_opacity = 0.88
+        background_opacity = 0.0
         background_radius = 12.0
-        center_password_text = false
-        input_opacity = 1.0
+        center_password_text = true
+        input_opacity = 0.70000000000000007
         input_radius = 6.0
         layout = "regular"
         show_caps_lock = true
@@ -407,11 +417,36 @@ widget_order = [ "lockscreen-login-box@DP-3" ]
         show_unlock_hint = true
         show_weather = true
 
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 112.0
+    box_width = 256.0
+    cx = 960.0
+    cy = 316.0
+    enabled = true
+    output = "DP-3"
+    rotation = -0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        background_color = "surface"
+        background_opacity = 0.0
+        background_padding = 10
+        background_radius = 12
+        center_text = true
+        circle = true
+        clock_style = "digital"
+        color = "primary"
+        font_family = ""
+        format = "{:%H:%M}"
+        shadow = false
+        timezone = ""
+
 [nightlight]
 enabled = true
 force = false
 temperature_day = 10000
-temperature_night = 3000
+temperature_night = 2800
 
 [notification]
 background_opacity = 0.97000002861022949
@@ -437,8 +472,8 @@ monitors = []
 offset_x = 20
 offset_y = 8
 orientation = "horizontal"
-position = "top_right"
-position_vertical = "top_right"
+position = "top_center"
+position_vertical = "top_center"
 scale = 1.0
 
     [osd.kinds]
@@ -484,8 +519,7 @@ enabled = [
     "nightwatch75/todo",
     "noctalia/notes",
     "thepunkoff/pomodoro",
-    "dotnetrob/cat",
-    "nzlov/daily-wallpaper"
+    "dotnetrob/cat"
 ]
 
     [[plugins.source]]
@@ -540,7 +574,7 @@ time_format = "{:%H:%M}"
     speed = 1.0
 
     [shell.greeter_sync]
-    auto_sync = false
+    auto_sync = true
 
     [shell.keyboard_layout]
 
@@ -761,6 +795,9 @@ type = "yuuto/calculator:bar"
 
 [widget.bar_3]
 type = "noctalia/timer:bar"
+
+[widget.cat]
+type = "dotnetrob/cat:cat"
 
 [widget.control-center]
 glyph = "home"
