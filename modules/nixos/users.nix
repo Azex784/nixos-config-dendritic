@@ -6,7 +6,7 @@
       shell = pkgs.zsh;
       isNormalUser = true;
       description = "azex";
-      extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+      extraGroups = [ "networkmanager" "wheel" "kvm" ]; # Enable ‘sudo’ for the user.
     };
   };
 }

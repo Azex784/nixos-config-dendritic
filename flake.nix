@@ -21,7 +21,7 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     lanzaboote = {
@@ -39,8 +39,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-jetbrains-plugins.url = "github:nix-community/nix-jetbrains-plugins";
-
+    nix-jetbrains-plugins = {
+      url = "github:nix-community/nix-jetbrains-plugins";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;}{
     imports = [

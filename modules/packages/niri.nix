@@ -1,12 +1,17 @@
 { self, inputs, ... }: {
   perSystem = { pkgs, lib, self', ... }: {
+
+    _module.args.pkgs = import inputs.nixpkgs {
+        config.allowUnfree = true;
+      };
+
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
       settings = {
         spawn-at-startup = [
           (lib.getExe pkgs.noctalia)
-          "zeditor"
-          "vivaldi"
+          (lib.getExe pkgs.zed-editor)
+          (lib.getExe pkgs.vivaldi)
           "spotify"
         ];
 
@@ -28,16 +33,23 @@
 
           {
             matches = [
+              { app-id = "jetbrains-clion"; }
+            ];
+            open-on-workspace = "2-code";
+          }
+
+          {
+            matches = [
               { app-id = "vivaldi-stable"; }
             ];
-            open-on-workspace = "2-web";
+            open-on-workspace = "3-web";
           }
 
           {
             matches = [
               { app-id = "Spotify"; }
             ];
-            open-on-workspace = "3-music";
+            open-on-workspace = "4-music";
           }
 
           {
@@ -45,16 +57,17 @@
               { app-id = "org.prismlauncher.PrismLauncher"; }
               { app-id = "steam"; }
             ];
-            open-on-workspace = "4-gaming";
+            open-on-workspace = "5-gaming";
           }
 
         ];
 
         workspaces = {
           "1-editor" = {};
-          "2-web" = {};
-          "3-music" = {};
-          "4-gaming" = {};
+          "2-code" = {};
+          "3-web" = {};
+          "4-music" = {};
+          "5-gaming" = {};
         };
 
 
@@ -66,9 +79,9 @@
        	};
 
         binds = {
-          "Mod+Z".spawn-sh = "alacritty";
-          "Mod+Shift+Z".spawn-sh = "zeditor";
-          "Mod+Shift+Q".spawn-sh = "vivaldi";
+          "Mod+Z".spawn-sh = lib.getExe pkgs.alacritty;
+          "Mod+Shift+Z".spawn-sh = lib.getExe pkgs.zed-editor;
+          "Mod+Shift+Q".spawn-sh = lib.getExe pkgs.vivaldi;
           "Mod+Shift+E".spawn-sh = "spotify";
 
           "Mod+D".spawn-sh = "noctalia msg panel-toggle launcher";

@@ -17,11 +17,15 @@
         hyprpicker
         fzf
         gh
+        qrencode
         # --> End of Noctalia Plugins Dependencies <--
-        # jetbrains.clion
         steam
         neovim
-        tor
+        tor-browser
+        proton-vpn
+        # Virtual Machine
+        quickgui
+        quickemu
       ];
     };
   };

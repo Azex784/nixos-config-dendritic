@@ -500,7 +500,6 @@ system_collector_enabled = true
 download_dir = "/home/azex/nixos/assets/wallpapers"
 
 [plugins]
-auto_update = true
 enabled = [
     "yuuto/calculator",
     "oldirtty/color_picker",

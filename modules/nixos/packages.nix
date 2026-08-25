@@ -21,7 +21,6 @@
         arch-install-scripts
         gparted
         noctalia
-        riseup-vpn
       ];
     };
   };
