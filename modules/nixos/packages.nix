@@ -21,6 +21,7 @@
         arch-install-scripts
         gparted
         noctalia
+        e2fsprogs
       ];
     };
   };

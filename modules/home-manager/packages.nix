@@ -24,7 +24,7 @@
         tor-browser
         proton-vpn
         # Virtual Machine
-        quickgui
+        vm-curator
         quickemu
       ];
     };

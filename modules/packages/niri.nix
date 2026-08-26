@@ -34,8 +34,11 @@
           {
             matches = [
               { app-id = "jetbrains-clion"; }
+              { app-id = "org.prismlauncher.PrismLauncher"; }
+              { app-id = "steam"; }
+              { app-id = "anki"; }
             ];
-            open-on-workspace = "2-code";
+            open-on-workspace = "2-focus";
           }
 
           {
@@ -51,23 +54,13 @@
             ];
             open-on-workspace = "4-music";
           }
-
-          {
-            matches = [
-              { app-id = "org.prismlauncher.PrismLauncher"; }
-              { app-id = "steam"; }
-            ];
-            open-on-workspace = "5-gaming";
-          }
-
         ];
 
         workspaces = {
           "1-editor" = {};
-          "2-code" = {};
+          "2-focus" = {};
           "3-web" = {};
           "4-music" = {};
-          "5-gaming" = {};
         };
 
 
