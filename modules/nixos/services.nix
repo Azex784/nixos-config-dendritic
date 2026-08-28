@@ -3,6 +3,7 @@
   flake.modules.nixos.services = { pkgs, lib, ... }: {
     # Services
     services = {
+      tailscale.enable = true;
       # Enable the X11 windowing system.
       xserver.enable = true;
       # Enable the OpenSSH daemon.

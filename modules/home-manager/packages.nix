@@ -26,6 +26,7 @@
         # Virtual Machine
         vm-curator
         quickemu
+        tailscale
       ];
     };
   };
