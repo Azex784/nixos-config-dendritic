@@ -15,9 +15,11 @@
           rbt="sudo reboot now";
 
           # Package management
-          upd = "sudo nix flake update --flake /etc/nixos";
-          upg = "sudo nixos-rebuild switch --impure --flake /home/azex/nixos#Sarasti";
-          delete-cache = "nix-collect-garbage";
+          upd = "sudo nix flake update --flake /home/azex/nixos";
+          SarastiUpg = "sudo nixos-rebuild switch --impure --flake /home/azex/nixos#Sarasti";
+          OmnisonUpg = "sudo nixos-rebuild switch --impure --flake /home/azex/nixos#Omnison";
+          delete-cache = "sudo nix-collect-garbage";
+          delete = "sudo nix-collect-garbage -d";
         };
       };
     };

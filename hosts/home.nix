@@ -9,6 +9,5 @@
    programs.home-manager.enable = true;
    home.username = "azex";
    home.homeDirectory = "/home/azex";
-
   };
 }

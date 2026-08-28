@@ -1,6 +1,8 @@
 { self, inputs, ... }: {
 
   flake.modules.nixos.packages = { pkgs, lib, ... }: {
+    # Pop in security icons
+    security.polkit.enable = true;
     programs = {
       # Some programs need SUID wrappers, can be configured further or are
       # started in user sessions.

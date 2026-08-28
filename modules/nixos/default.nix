@@ -15,8 +15,6 @@
     ];
     # This option defines the first version of NixOS you have installed on this particular machine,
     system.stateVersion = "26.05";
-    # Pop in security icons
-    security.polkit.enable = true;
     nix.settings.experimental-features = "nix-command flakes";
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";

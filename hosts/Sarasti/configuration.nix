@@ -4,7 +4,7 @@
     # import any other modules from here
     imports = [
       self.modules.nixos.default
-      self.modules.nixos.hardware
+      self.modules.nixos.SarastiHardware
       self.modules.nixos.nvidia-drivers
     ];
 
