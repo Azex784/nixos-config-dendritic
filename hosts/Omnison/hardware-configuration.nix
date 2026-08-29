@@ -18,6 +18,53 @@
         device = "/dev/disk/by-uuid/f16fba76-a92b-4db0-806a-c04e663819f3";
     };
 
+    boot.initrd.luks.devices."crypthome" = {
+        device = "/dev/disk/by-uuid/fc27aa46-9925-4277-979e-564e4703d73e";
+        keyFile = "/cryptkey";
+    };
+
+    boot.initrd.secrets."/cryptkey" = builtins.path {
+        path = "/secrets/cryptkey";
+        name = "cryptkey";
+    };
+
+    fileSystems."/home/azex/Documents" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=Documents,compress=zstd" ];
+    };
+
+    fileSystems."/home/azex/IT" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=IT,compress=zstd" ];
+    };
+
+    fileSystems."/home/azex/College" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=College,compress=zstd" ];
+    };
+
+    fileSystems."/home/azex/Pictures" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=Pictures" ];
+    };
+
+    fileSystems."/home/azex/Videos" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=Videos" ];
+    };
+
+    fileSystems."/home/azex/Music" = {
+        device = "/dev/mapper/crypthome";
+        fsType = "btrfs";
+        options = [ "subvol=Music" ];
+    };
+
+
     fileSystems."/" =
       { device = "/dev/mapper/cryptnixos";
         fsType = "btrfs";

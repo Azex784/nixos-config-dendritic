@@ -5,9 +5,12 @@
         config.allowUnfree = true;
       };
 
+
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
       settings = {
+        input.touchpad.natural-scroll = {};
+
         spawn-at-startup = [
           (lib.getExe pkgs.noctalia)
           (lib.getExe pkgs.zed-editor)
