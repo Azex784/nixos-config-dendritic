@@ -8,6 +8,7 @@
       # started in user sessions.
       steam.enable = true;
       zsh.enable = true;
+      fish.enable = true;
       mtr.enable = true;
       dconf.enable = true;
       bash.enable = true;
@@ -23,6 +24,7 @@
         arch-install-scripts
         gparted
         noctalia
+        jq
         e2fsprogs
       ];
     };

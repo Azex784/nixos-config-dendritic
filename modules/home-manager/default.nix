@@ -15,6 +15,7 @@
       self.modules.homeManager.spicetify
       self.modules.homeManager.zed
       self.modules.homeManager.clion
+      self.modules.homeManager.fish
     ];
   };
 }
