@@ -16,6 +16,7 @@
       self.modules.homeManager.zed
       self.modules.homeManager.clion
       self.modules.homeManager.fish
+      self.modules.homeManager.yazi
     ];
   };
 }

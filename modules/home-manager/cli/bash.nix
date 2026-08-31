@@ -6,6 +6,9 @@
         enable = true;
         initExtra = ''
             set -o vi
+            bind 'set show-mode-in-prompt on'
+            bind 'set vi-cmd-mode-string "\1\e[2 q\2"' # Tryb Normal (Steady Block)
+            bind 'set vi-ins-mode-string "\1\e[6 q\2"' # Tryb Insert (Steady Beam)
           '';
 
         shellAliases  = {

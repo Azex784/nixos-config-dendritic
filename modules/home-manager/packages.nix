@@ -27,6 +27,9 @@
         vm-curator
         quickemu
         tailscale
+        docker
+        pacvim
+        thunar
       ];
     };
   };

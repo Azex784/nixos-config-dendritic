@@ -11,6 +11,7 @@
       self.modules.nixos.noctalia-greeter
       self.modules.nixos.services
       self.modules.nixos.networking
+      self.modules.nixos.fonts
 
     ];
     # This option defines the first version of NixOS you have installed on this particular machine,

@@ -14,6 +14,14 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       history.size = 10000;
+      plugins = [
+        {
+          name = "zsh-vi-mode";
+          src = pkgs.zsh-vi-mode;
+          file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+        }
+      ];
+
       shellAliases  = {
           # General
           ll = "ls -la";
