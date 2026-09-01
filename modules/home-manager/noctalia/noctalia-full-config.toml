@@ -32,6 +32,7 @@ order = [ "default" ]
     contact_shadow = false
     enabled = true
     end = [ "group:g2", "group:g9", "group:g8", "keyboard_layout", "group:g1" ]
+    font_scale = 1.0
     font_weight = 500
     hover_highlight = true
     layer = "top"
@@ -264,7 +265,7 @@ launcher_custom_image = ""
 launcher_custom_image_colorize = false
 launcher_icon = "grid-dots"
 launcher_position = "none"
-layer = "overlay"
+layer = "top"
 magnification = true
 magnification_scale = 1.5
 main_axis_padding = 10
@@ -333,6 +334,7 @@ pre_action_fade_seconds = 2.0
     action = "lock"
     command = ""
     enabled = false
+    locked_timeout = 0.0
     resume_command = ""
     timeout = 600.0
 
@@ -340,6 +342,7 @@ pre_action_fade_seconds = 2.0
     action = "lock_and_suspend"
     command = ""
     enabled = false
+    locked_timeout = 0.0
     resume_command = ""
     timeout = 900.0
 
@@ -347,6 +350,7 @@ pre_action_fade_seconds = 2.0
     action = "screen_off"
     command = ""
     enabled = false
+    locked_timeout = 0.0
     resume_command = ""
     timeout = 660.0
 
@@ -398,6 +402,8 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-000000000000000
     cy = 526.0
     enabled = true
     output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -424,6 +430,8 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-000000000000000
     cy = 316.0
     enabled = true
     output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = -0.0
     type = "clock"
 
@@ -446,7 +454,7 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-000000000000000
 enabled = true
 force = false
 temperature_day = 10000
-temperature_night = 2800
+temperature_night = 2700
 
 [notification]
 background_opacity = 0.97000002861022949
@@ -500,6 +508,7 @@ system_collector_enabled = true
 download_dir = "/home/azex/nixos/assets/wallpapers"
 
 [plugins]
+auto_update = "all"
 enabled = [
     "yuuto/calculator",
     "oldirtty/color_picker",
@@ -583,7 +592,10 @@ time_format = "{:%H:%M}"
     categories = true
     compact = false
     fetch_exchange_rates = true
+    pinned = []
     provider_prefix = "/"
+    show_app_actions = false
+    show_app_origin_indicator = true
     show_icons = true
     sort_by_usage = true
 
@@ -756,7 +768,7 @@ wallpaper_scheme = "soft"
     enable_community_templates = true
 
 [wallpaper]
-directory = "/home/azex/nixos/assets/wallpapers"
+directory = "/home/azex/Nixos/assets/wallpapers"
 directory_dark = ""
 directory_light = ""
 edge_smoothness = 0.30000001192092896
