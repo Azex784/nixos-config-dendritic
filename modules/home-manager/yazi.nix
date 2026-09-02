@@ -10,6 +10,7 @@
       fd
       ripgrep
       zoxide
+      ueberzugpp
     ];
 
     programs.yazi = {

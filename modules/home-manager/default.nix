@@ -17,6 +17,7 @@
       self.modules.homeManager.clion
       self.modules.homeManager.fish
       self.modules.homeManager.yazi
+      self.modules.homeManager.gimp
     ];
   };
 }

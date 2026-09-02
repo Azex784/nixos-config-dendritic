@@ -24,8 +24,10 @@
         tailscale
         docker
         pacvim
-        thunar
         libreoffice
+        vlc
+        mpv
+        yt-dlp
       ];
     };
   };
