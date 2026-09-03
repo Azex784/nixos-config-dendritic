@@ -9,7 +9,7 @@
       self.modules.homeManager.zsh
       self.modules.homeManager.starship
       self.modules.homeManager.packages
-      self.modules.homeManager.alacritty
+      # self.modules.homeManager.alacritty
       self.modules.homeManager.dark-theme
       self.modules.homeManager.noctalia
       self.modules.homeManager.spicetify
@@ -18,6 +18,8 @@
       self.modules.homeManager.fish
       self.modules.homeManager.yazi
       self.modules.homeManager.gimp
+      self.modules.homeManager.fastfetch
+      self.modules.homeManager.kitty
     ];
   };
 }

@@ -79,7 +79,7 @@
        	};
 
         binds = {
-          "Mod+Z".spawn-sh = lib.getExe pkgs.alacritty;
+          "Mod+Z".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Shift+Z".spawn-sh = lib.getExe pkgs.zed-editor;
           "Mod+Shift+Q".spawn-sh = lib.getExe pkgs.vivaldi;
           "Mod+Shift+E".spawn-sh = "spotify";
@@ -96,13 +96,13 @@
           "Mod+O".spawn-sh = "noctalia msg session reboot";
           "Mod+P".spawn-sh = "noctalia msg session shutdown";
 
-          "Mod+B".spawn-sh = "noctalia msg media previous";
-          "Mod+N".spawn-sh = "noctalia msg media toggle";
-          "Mod+M".spawn-sh = "noctalia msg media next";
+          "Mod+Shift+B".spawn-sh = "noctalia msg media previous";
+          "Mod+Shift+N".spawn-sh = "noctalia msg media toggle";
+          "Mod+Shift+M".spawn-sh = "noctalia msg media next";
 
-          "Mod+Shift+B".spawn-sh = "noctalia msg volume-down";
-          "Mod+Shift+N".spawn-sh = "noctalia msg volume-mute";
-          "Mod+Shift+M".spawn-sh = "noctalia msg volume-up";
+          "Mod+B".spawn-sh = "noctalia msg volume-down";
+          "Mod+N".spawn-sh = "noctalia msg volume-mute";
+          "Mod+M".spawn-sh = "noctalia msg volume-up";
 
           "Mod+F1".show-hotkey-overlay = {};
           "Mod+Tab".toggle-overview = {};

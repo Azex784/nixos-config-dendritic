@@ -11,7 +11,6 @@
         keepassxc
         vivaldi
         anki
-        fastfetch
         zed-editor
         prismlauncher
         steam
@@ -20,7 +19,7 @@
         proton-vpn
         # Virtual Machine
         vm-curator
-        quickemu
+        qemu
         tailscale
         docker
         pacvim

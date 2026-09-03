@@ -26,6 +26,7 @@
         noctalia
         jq
         e2fsprogs
+        wget
         exfatprogs
       ];
     };
