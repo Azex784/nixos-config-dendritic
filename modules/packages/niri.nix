@@ -5,7 +5,6 @@
         config.allowUnfree = true;
       };
 
-
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
       settings = {
@@ -20,11 +19,16 @@
 
         prefer-no-csd = {};
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
-        input.keyboard.xkb.layout = "pl";
+        input.keyboard.xkb =
+        {
+          layout = "pl,us,de";
+          variant = ",,qwerty";
+        };
+
+
         layout.gaps = 5;
         hotkey-overlay.skip-at-startup = {};
         window-rule.open-maximized = true;
-
 
         window-rules = [
           {
@@ -140,6 +144,9 @@
 
           "Mod+Shift+K".move-window-up = {};
           "Mod+Shift+J".move-window-down = {};
+
+          "Alt+BracketRight".switch-layout = "next";
+          "Alt+BracketLeft".switch-layout = "prev";
 
           "Mod+G".toggle-window-floating = {};
           "Mod+T".switch-focus-between-floating-and-tiling = {};
