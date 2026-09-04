@@ -24,9 +24,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # In order to avoid compiling on the host, we have to omit following nixpkgs
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     lanzaboote = {
