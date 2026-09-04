@@ -3,15 +3,19 @@
   flake.modules.homeManager.kitty = { pkgs, lib, ... }: {
     programs.kitty = lib.mkForce {
       enable = true;
+      themeFile="tokyo_night_storm";
+      shellIntegration.enableBashIntegration = true;
+      shellIntegration.enableZshIntegration = true;
+      shellIntegration.enableFishIntegration = true;
       settings = {
         confirm_os_window_close = 0;
         shell = "${pkgs.fish}/bin/fish";
-        dynamic_background_opacity = true;
         enable_audio_bell = false;
         mouse_hide_wait = "-1.0";
         window_padding_width = 10;
-        background_opacity = "0.5";
-        background_blur = 5;
+        background_opacity = "0.99";
+        background_blur = 1;
+        font_family = "JetBrains Mono";
         symbol_map = let
           mappings = [
             "U+23FB-U+23FE"

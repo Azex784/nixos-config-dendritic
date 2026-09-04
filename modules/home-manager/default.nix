@@ -18,8 +18,8 @@
       self.modules.homeManager.fish
       self.modules.homeManager.yazi
       self.modules.homeManager.gimp
-      self.modules.homeManager.fastfetch
       self.modules.homeManager.kitty
+      self.modules.homeManager.fastfetch
     ];
   };
 }

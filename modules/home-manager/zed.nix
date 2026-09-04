@@ -5,6 +5,7 @@
       enable = true;
       extensions = [ "nix" "toml" "rust" "tokyo-night" ];
       userSettings = {
+        vim_mode = true;
         theme = {
           mode = "dark";
           light = "Tokyo Night Storm";
