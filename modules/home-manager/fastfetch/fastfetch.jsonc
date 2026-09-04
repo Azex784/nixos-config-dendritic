@@ -28,9 +28,11 @@
             "key": "├─", // Just get your distro's logo off nerdfonts.com
             "keyColor": "yellow"
         },
+
+
         {
             "type": "kernel",
-            "key": "├─",
+            "key": "├─",
             "keyColor": "yellow"
         },
         {
@@ -84,12 +86,12 @@
         },
         {
             "type": "cpu",
-            "key": "├─󰻠",
+            "key": "├─ ",
             "keyColor": "green"
         },
         {
             "type": "gpu",
-            "key": "├─󰍛",
+            "key": "├─󰢮",
             "keyColor": "green"
         },
         {
@@ -99,7 +101,7 @@
         },
         {
             "type": "memory",
-            "key": "├─󰑭",
+            "key": "├─ ",
             "keyColor": "green"
         },
         {

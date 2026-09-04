@@ -25,6 +25,21 @@
           variant = ",,qwerty";
         };
 
+        overview = {
+            zoom = 0.33;
+            workspace-shadow."off" = {};
+        };
+
+        layout = {
+          background-color = "00000000";
+        };
+
+        layer-rules = [
+          {
+            matches = [ { namespace = "noctalia-wallpaper"; } ];
+            place-within-backdrop = true;
+          }
+        ];
 
         layout.gaps = 5;
         hotkey-overlay.skip-at-startup = {};
