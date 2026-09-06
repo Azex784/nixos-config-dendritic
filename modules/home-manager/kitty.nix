@@ -1,6 +1,11 @@
 { self, inputs, ... }: {
 
   flake.modules.homeManager.kitty = { pkgs, lib, ... }: {
+    home = {
+      packages = with pkgs; [
+        jetbrains-mono
+      ];
+    };
     programs.kitty = lib.mkForce {
       enable = true;
       themeFile="tokyo_night_storm";

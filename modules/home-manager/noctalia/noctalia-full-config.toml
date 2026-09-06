@@ -192,6 +192,8 @@ sync_all_monitors = false
 
 [calendar]
 enabled = true
+event_date_format = "%A %e %B"
+event_time_format = "%H:%M"
 refresh_minutes = 15
 
     [calendar.account.personal_google]
@@ -200,6 +202,7 @@ refresh_minutes = 15
     credential_source = "secret-service"
     name = ""
     password_file = ""
+    path = ""
     provider = ""
     server_url = ""
     type = "google"
@@ -214,8 +217,6 @@ sidebar_section = "compact"
 width = 700
 
     [control_center.calendar]
-    event_date_format = "%A %e %B"
-    event_time_format = "%H:%M"
     show_events_card = true
     show_week_numbers = false
 
@@ -369,7 +370,7 @@ validate = [ "Return", "KP_Enter", "space" ]
 
 [location]
 address = "Lodz, Polska"
-auto_locate = true
+auto_locate = false
 custom_schedule = false
 sunrise = "07:00"
 sunset = "19:00"
@@ -454,7 +455,7 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-000000000000000
 enabled = true
 force = false
 temperature_day = 10000
-temperature_night = 2700
+temperature_night = 2500
 
 [notification]
 background_opacity = 0.97000002861022949
@@ -557,7 +558,7 @@ corner_radius_scale = 1.0
 date_format = "%A, %x"
 disable_mipmaps = false
 external_ip_enabled = false
-font_family = "sans-serif"
+font_family = "JetBrains Mono"
 input_borders = true
 lang = "en"
 launch_apps_as_systemd_services = false
@@ -711,6 +712,9 @@ time_format = "{:%H:%M}"
     alpha = 0.55000001192092896
     direction = "down"
 
+    [shell.window_switcher]
+    mru = false
+
 [storage]
 key_file = ""
 key_source = "secret-service"
@@ -758,6 +762,7 @@ community_palette = "Tokyo Night Storm"
 custom_palette = ""
 mode = "dark"
 pure_black_dark = false
+shell_mode = "follow"
 source = "community"
 wallpaper_scheme = "soft"
 
@@ -768,7 +773,7 @@ wallpaper_scheme = "soft"
     enable_community_templates = true
 
 [wallpaper]
-directory = "/home/azex/Nixos/assets/wallpapers"
+directory = "/home/azex/Pictures/Wallpapers"
 directory_dark = ""
 directory_light = ""
 edge_smoothness = 0.30000001192092896

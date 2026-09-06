@@ -9,8 +9,12 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
+    systems = {
+         url = "github:nix-systems/default";
+    };
+
     wrapper-modules = {
-      url = "github:BirdeeHub/nix-wrapper-modules";
+      url = "github:nix-community/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -31,13 +35,14 @@
     };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.1.0";
+      url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
 
     noctalia-greeter = {
@@ -48,6 +53,7 @@
     nix-jetbrains-plugins = {
       url = "github:nix-community/nix-jetbrains-plugins";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
   };
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;}{

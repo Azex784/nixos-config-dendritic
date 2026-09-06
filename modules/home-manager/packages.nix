@@ -27,7 +27,6 @@
         vlc
         mpv
         yt-dlp
-        audacity
       ];
     };
   };

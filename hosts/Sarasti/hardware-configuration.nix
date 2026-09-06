@@ -21,15 +21,14 @@
     };
 
     boot.initrd.secrets."/cryptkey" = builtins.path {
-        path = "/secrets/cryptkey";
+        path = /secrets/cryptkey;
         name = "cryptkey";
     };
 
     boot.initrd.secrets."/cryptkey_" = builtins.path {
-        path = "/secrets/cryptkey_";
+        path = /secrets/cryptkey_;
         name = "cryptkey_";
     };
-
 
     fileSystems."/home/azex/Documents" = {
         device = "/dev/mapper/crypthome";

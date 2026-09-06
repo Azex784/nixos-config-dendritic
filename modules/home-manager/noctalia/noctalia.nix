@@ -11,6 +11,7 @@
       fzf
       gh
       qrencode
+      jetbrains-mono
       ];
     };
 

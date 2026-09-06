@@ -1,7 +1,8 @@
 { self, inputs, ... }: {
-  perSystem = { pkgs, lib, self', ... }: {
+  perSystem = { pkgs, lib, self', system, ... }: {
 
     _module.args.pkgs = import inputs.nixpkgs {
+        inherit system;
         config.allowUnfree = true;
       };
 
