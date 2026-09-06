@@ -28,6 +28,8 @@
         e2fsprogs
         wget
         exfatprogs
+        zip
+        unzip
       ];
     };
   };

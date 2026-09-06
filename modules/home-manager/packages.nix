@@ -27,6 +27,7 @@
         vlc
         mpv
         yt-dlp
+        speedtest-cli
       ];
     };
   };
