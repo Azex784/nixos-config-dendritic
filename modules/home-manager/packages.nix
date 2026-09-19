@@ -28,6 +28,8 @@
         mpv
         yt-dlp
         speedtest-cli
+        strawberry
+        pavucontrol
       ];
     };
   };

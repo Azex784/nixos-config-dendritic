@@ -30,6 +30,8 @@
         exfatprogs
         zip
         unzip
+        ffmpeg
+
       ];
     };
   };

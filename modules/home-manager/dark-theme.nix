@@ -8,7 +8,11 @@
         package = pkgs.gnome-themes-extra;
       };
     };
-
+    qt = {
+      enable = true;
+      platformTheme.name = "qtct";
+      style.name = "kvantum";
+    };
     dconf.settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";   # to jest kluczowe dla apek libadwaita (GTK4)
