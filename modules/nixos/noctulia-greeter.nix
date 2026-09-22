@@ -4,7 +4,7 @@
     imports = [
       inputs.noctalia-greeter.nixosModules.default
     ];
-    programs.noctalia-greeter = {
+    services.displayManager.noctalia-greeter = {
       enable = true;
       # Full declarative greeter.toml (overwritten each activation). See examples/greeter.toml.
       settings = {

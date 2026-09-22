@@ -12,6 +12,7 @@
       self.modules.nixos.services
       self.modules.nixos.networking
       self.modules.nixos.fonts
+      self.modules.nixos.pipewire
 
     ];
     # This option defines the first version of NixOS you have installed on this particular machine,

@@ -112,6 +112,9 @@
           "Mod+O".spawn-sh = "noctalia msg session reboot";
           "Mod+P".spawn-sh = "noctalia msg session shutdown";
 
+          "Mod+Pause".spawn-sh = "noctalia msg plugin apex077/eyecare:eyecare-service all idled";
+          "Mod+Shift+Pause".spawn-sh = "noctalia msg plugin apex077/eyecare:eyecare-service all active";
+
           "Mod+Shift+B".spawn-sh = "noctalia msg media previous";
           "Mod+Shift+N".spawn-sh = "noctalia msg media toggle";
           "Mod+Shift+M".spawn-sh = "noctalia msg media next";
@@ -144,6 +147,7 @@
 
           "Mod+Shift+D".focus-workspace-down = {};
           "Mod+Shift+A".focus-workspace-up = {};
+          "Mod+Grave".focus-workspace-previous = {}; # Grave to zazwyczaj klawisz z tyldą (~)
 
           "Mod+1".focus-workspace = 1;
           "Mod+2".focus-workspace = 2;
@@ -154,6 +158,16 @@
           "Mod+7".focus-workspace = 7;
           "Mod+8".focus-workspace = 8;
           "Mod+9".focus-workspace = 9;
+
+          "Mod+Shift+1".move-column-to-workspace = 1;
+          "Mod+Shift+2".move-column-to-workspace = 2;
+          "Mod+Shift+3".move-column-to-workspace = 3;
+          "Mod+Shift+4".move-column-to-workspace = 4;
+          "Mod+Shift+5".move-column-to-workspace = 5;
+          "Mod+Shift+6".move-column-to-workspace = 6;
+          "Mod+Shift+7".move-column-to-workspace = 7;
+          "Mod+Shift+8".move-column-to-workspace = 8;
+          "Mod+Shift+9".move-column-to-workspace = 9;
 
           "Mod+Shift+H".move-column-left = {};
           "Mod+Shift+L".move-column-right = {};

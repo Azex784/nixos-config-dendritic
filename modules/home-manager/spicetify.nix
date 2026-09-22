@@ -19,7 +19,6 @@
         hidePodcasts
         shuffle
         fullAlbumDate
-        betterGenres
         aiBandBlocker
       ];
 
