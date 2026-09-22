@@ -31,7 +31,8 @@
         zip
         unzip
         ffmpeg
-
+        udiskie
+        ddcutil
       ];
     };
   };

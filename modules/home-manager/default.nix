@@ -20,7 +20,7 @@
       self.modules.homeManager.gimp
       self.modules.homeManager.kitty
       self.modules.homeManager.fastfetch
-      # self.modules.homeManager.deadbeef
+      self.modules.homeManager.udiskie
     ];
   };
 }

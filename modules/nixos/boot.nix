@@ -9,6 +9,8 @@
           theme = "bgrt";
       };
 
+      supportedFilesystems = [ "exfat" ];
+
       consoleLogLevel = 3;
       initrd.verbose = false;
       kernelParams = [

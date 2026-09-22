@@ -16,6 +16,11 @@
       };
       # Enable CUPS to print documents.
       printing.enable = true;
+      udisks2.enable = true;
+      gvfs.enable = true;
+      devmon.enable = true;
+
+
     };
   };
 }

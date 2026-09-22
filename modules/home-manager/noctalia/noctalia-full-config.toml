@@ -87,7 +87,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "date", "clock", "notifications" ]
+        members = [ "clock", "date", "notifications" ]
         opacity = 1.0
         padding = 6.0
 
@@ -137,7 +137,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g9"
-        members = [ "network", "bluetooth", "clipboard", "notes", "todo", "bar", "settings" ]
+        members = [ "status", "network", "bluetooth", "clipboard", "notes", "todo", "bar", "settings" ]
         opacity = 1.0
         padding = 6.0
 
@@ -455,7 +455,7 @@ widget_order = [ "lockscreen-login-box@DP-3", "lockscreen-widget-000000000000000
 enabled = true
 force = false
 temperature_day = 10000
-temperature_night = 2500
+temperature_night = 2000
 
 [notification]
 background_opacity = 0.97000002861022949
@@ -463,6 +463,7 @@ border = true
 collapse_on_dismiss = true
 enable_daemon = true
 history_retention_hours = 0
+keep_dismissed_in_history = true
 layer = "top"
 max_visible = 0
 monitors = []
@@ -502,6 +503,12 @@ scale = 1.0
     volume_output = true
     wifi = true
 
+[plugin_settings."apex077/eyecare"]
+enable_sound = false
+
+[plugin_settings."aristides/udiskie"]
+file_manager_cmd = "kitty -e yazi"
+
 [plugin_settings."gustav0ar/drive-health"]
 system_collector_enabled = true
 
@@ -516,7 +523,6 @@ enabled = [
     "nightwatch75/file-search",
     "cleboost/jetbrains-provider",
     "cleboost/zed-provider",
-    "rylos/syncthing",
     "noctalia/wallhaven",
     "apex077/eyecare",
     "yocraft/qrcode",
@@ -528,7 +534,8 @@ enabled = [
     "nightwatch75/todo",
     "noctalia/notes",
     "thepunkoff/pomodoro",
-    "dotnetrob/cat"
+    "dotnetrob/cat",
+    "aristides/udiskie"
 ]
 
     [[plugins.source]]
@@ -563,7 +570,7 @@ input_borders = true
 lang = "en"
 launch_apps_as_systemd_services = false
 launch_apps_custom_command = ""
-niri_overview_type_to_launch_enabled = false
+niri_overview_type_to_launch_enabled = true
 offline_mode = false
 password_style = "default"
 polkit_agent = true
@@ -640,6 +647,8 @@ time_format = "{:%H:%M}"
     size = 32
 
     [shell.screenshot]
+    annotate = false
+    close_on_copy = true
     confirm_region = false
     copy_to_clipboard = true
     directory = ""
@@ -767,7 +776,7 @@ source = "community"
 wallpaper_scheme = "soft"
 
     [theme.templates]
-    builtin_ids = []
+    builtin_ids = [ "kitty", "niri", "starship" ]
     community_ids = []
     enable_builtin_templates = true
     enable_community_templates = true
@@ -893,6 +902,11 @@ type = "sysmon"
 [widget.spacer]
 interactive = false
 type = "spacer"
+
+[widget.status]
+hide_when_empty = true
+show_count = false
+type = "aristides/udiskie:status"
 
 [widget.sysmon]
 interactive = false
