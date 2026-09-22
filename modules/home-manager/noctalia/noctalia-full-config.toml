@@ -137,7 +137,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g9"
-        members = [ "status", "network", "bluetooth", "clipboard", "notes", "todo", "bar", "settings" ]
+        members = [ "status", "network", "bluetooth", "clipboard", "bar", "notes", "settings" ]
         opacity = 1.0
         padding = 6.0
 
@@ -185,7 +185,7 @@ order = [ "default" ]
 warning_threshold = 10
 
 [brightness]
-enable_ddcutil = false
+enable_ddcutil = true
 ignore_mmids = []
 minimum_brightness = 0.0
 sync_all_monitors = false
