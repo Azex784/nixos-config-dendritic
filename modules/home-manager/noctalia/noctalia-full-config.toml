@@ -137,7 +137,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g9"
-        members = [ "status", "network", "bluetooth", "clipboard", "bar", "notes", "settings" ]
+        members = [ "status", "network", "battery", "bluetooth", "clipboard", "bar", "notes", "settings" ]
         opacity = 1.0
         padding = 6.0
 
