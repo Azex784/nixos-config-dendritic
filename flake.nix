@@ -1,9 +1,4 @@
 {
-  nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
-  };
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -26,12 +21,6 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # In order to avoid compiling on the host, we have to omit following nixpkgs
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     lanzaboote = {

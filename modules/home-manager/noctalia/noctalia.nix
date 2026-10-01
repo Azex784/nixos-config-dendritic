@@ -1,10 +1,6 @@
 { self, inputs, ... }: {
 
   flake.modules.homeManager.noctalia = { pkgs, lib, ... }: {
-    imports = [
-        inputs.noctalia.homeModules.default
-      ];
-
     home = {
       packages = with pkgs; [
       hyprpicker
